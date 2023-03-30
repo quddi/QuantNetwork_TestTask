@@ -4,8 +4,6 @@ public class GroundChecker : MonoBehaviour
 {
     [SerializeField] private BoxCollider2D _boxCollider2D;
     [SerializeField] private LayerMask _groundLayerMask;
-    
-    private const string _groundTag = "Ground";
 
     public bool IsGrounded { get; private set; }
 
