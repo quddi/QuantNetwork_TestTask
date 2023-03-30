@@ -7,8 +7,7 @@ public class MovementButton : MonoBehaviour, IPointerUpHandler, IPointerDownHand
     public event Action ClickStartEvent;
     public event Action ClickEndEvent;
     
-    [field: SerializeField]
-    public bool IsClicked { get; private set; }
+    [field: SerializeField] public bool IsClicked { get; private set; }
 
     public void OnPointerUp(PointerEventData eventData)
     {
@@ -20,10 +19,5 @@ public class MovementButton : MonoBehaviour, IPointerUpHandler, IPointerDownHand
     {
         ClickStartEvent?.Invoke();
         IsClicked = true;
-    }
-
-    private void Update()
-    {
-        Debug.Log(gameObject.name + ": " + IsClicked);
     }
 }
