@@ -1,12 +1,11 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(MovementButton))]
 public class MovementButtonPresenter : MonoBehaviour
 {
-    [SerializeField] private Color _clickedColor;
-    [SerializeField] private Color _notClickedColor;
+    [SerializeField] private Sprite _clickedSprite;
+    [SerializeField] private Sprite _notClickedSprite;
     [SerializeField] private Image _buttonImage;
     
     private MovementButton _movementButton;
@@ -18,12 +17,12 @@ public class MovementButtonPresenter : MonoBehaviour
 
     private void OnClickStart()
     {
-        _buttonImage.color = _clickedColor;
+        _buttonImage.sprite = _clickedSprite;
     }
     
     private void OnClickEnd()
     {
-        _buttonImage.color = _notClickedColor;
+        _buttonImage.sprite = _notClickedSprite;
     }
 
     private void OnEnable()
